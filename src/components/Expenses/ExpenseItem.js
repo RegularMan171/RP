@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import {useState} from 'react';
 
 import "./ExpenseItem.css";
 import "./ExpenseDate";
@@ -23,6 +23,8 @@ const ExpenseItem = (props) => {
         <div className="expense-item__price">{props.amount}</div>
       </div>
       <button onClick={clickHandler}>Change Title</button>
+      {/* we do not add parenthesis after clickHandler because
+      js runs it when jsx runs not when the click occurs if we add parenthesis */}
     </Card>
   );
 }
