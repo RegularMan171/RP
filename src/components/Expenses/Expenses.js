@@ -16,13 +16,8 @@ const Expenses = (props) => {
   return (
     <div>
     <Card className = 'expenses'>
-            <ExpenseFilter selected={filteredYear} onChangeFilter = {filterChageHandler}/>
-      {/* <ExpenseItem
-        title={props.items[1].title}
-        amount={props.items[1].amount}
-        date={props.items[1].date}
-      ></ExpenseItem> */}
-    {props.items.map((e) => (
+      <ExpenseFilter selected={filteredYear} onChangeFilter = {filterChageHandler}/>
+      {props.items.map((e) => (
         <ExpenseItem key={e.id} title={e.title} amount={e.amount} date={e.date} />
       ))}
     </Card>
